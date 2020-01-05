@@ -10,7 +10,8 @@
         { "$TypeId": 9, "Id": "ce93dd5348fd4f1f8cac7febbc81022c", "Name": "Background" },
         { "$TypeId": 9, "Id": "e494b2183b6e406cbfe68836766d7ef8", "Name": "Background" },
         { "$TypeId": 9, "Id": "d4e68dfb2d90418190b42cdcd6564705", "Name": "BackgroundParallax" },
-        { "$TypeId": 9, "Id": "7b5193409eac4c63a755fbcb66ed1246", "Name": "BackgroundParallax" }
+        { "$TypeId": 9, "Id": "7b5193409eac4c63a755fbcb66ed1246", "Name": "BackgroundParallax" },
+        { "$TypeId": 9, "Id": "58bf9e609c0b427a8dddf959a8e250f9", "Name": "Player" }
     ]
 },
 {
@@ -356,5 +357,61 @@
         "Properties": {
             "order": 2
         }
+    }]
+},
+{
+    "$TypeId": 5,
+    "Id": "58bf9e609c0b427a8dddf959a8e250f9",
+    "Name": "Player",
+    "Enabled": true,
+    "Static": false,
+    "Layer": 0,
+    "Components": [{
+        "Type": { "Id": "c895dbe72eb46ecb10d589d320151758", "Name": "TransformNode" }
+    }, {
+        "Type": { "Id": "70449d66178e0d9f66795c24f0fbbdfc", "Name": "TransformLocalPosition" },
+        "Properties": {
+            "position": {
+                "Type": { "Id": "f139194553e8ae4a3250c5527d6de169", "Name": "Vector3" },
+                "Properties": {
+                    "x": 0,
+                    "y": 0
+                }
+            }
+        }
+    }, {
+        "Type": { "Id": "1c504a8a7963db0d32e89b527b90e057", "Name": "Sprite2DRenderer" },
+        "Properties": {
+            "sprite": { "$TypeId": 10, "Guid": "23433a877f75d754c9f1bfb18e7493a4", "FileId": 21300002, "Type": 3 }
+        }
+    }, {
+        "Type": { "Id": "b1e5348389156b7a260d6ed393754fba", "Name": "LayerSorting" },
+        "Properties": {
+            "order": 5
+        }
+    }, {
+        "Type": { "Id": "95eba163dce5bfff5420a5a8c2845523", "Name": "Sprite2DSequence" },
+        "Properties": {
+            "sprites": {
+                "Type": { "Id": "cf54a635a25248ab87f2563bb840ed5b", "Name": "SpriteEntity" },
+                "Items": [
+                    { "$TypeId": 10, "Guid": "23433a877f75d754c9f1bfb18e7493a4", "FileId": 21300002, "Type": 3 },
+                    { "$TypeId": 10, "Guid": "23433a877f75d754c9f1bfb18e7493a4", "FileId": 21300036, "Type": 3 }
+                ]
+            },
+            "frameRate": 5
+        }
+    }, {
+        "Type": { "Id": "d2cfd18aa4facc33b1da7ae05205691b", "Name": "Sprite2DSequencePlayer" },
+        "Properties": {
+            "sequence": { "$TypeId": 9, "Id": "58bf9e609c0b427a8dddf959a8e250f9", "Name": "raider2a" },
+            "speed": 1
+        }
+    }, {
+        "Type": { "Id": "2ce937cc256b41338ff130f771ebe456", "Name": "Boundaries" }
+    }, {
+        "Type": { "Id": "ac7171f755064f14a81688b54b35e4bf", "Name": "PlayerTag" }
+    }, {
+        "Type": { "Id": "9c42738856cd439ab0b4f131cc95c0e7", "Name": "MoveSpeed" }
     }]
 }]
